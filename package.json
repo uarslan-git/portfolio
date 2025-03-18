@@ -4,14 +4,15 @@
   "description": "Umut's website",
   "main": "index.js",
   "scripts": {
-	  "dev": "next dev -H 0.0.0.0",
-	  "build": "next build",
-	  "prettier": "prettier -write .",
-	  "lint": "next lint"
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "prettier": "prettier -write .",
+    "lint": "next lint"
   },
   "author": "Umut Arslan<umut_arslan@gmx.de>",
   "license": "MIT",
   "dependencies": {
+    "@chakra-ui/icons": "^2.2.4",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
