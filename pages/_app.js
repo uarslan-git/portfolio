@@ -8,7 +8,7 @@ const Website = ({Component, pageProps, router}) => {
         <Layout router={router}>
             <Component {...pageProps} key={router.pathname} />
         </Layout>
-        </ChakraProvider>
+      </ChakraProvider>
   )
 }
 

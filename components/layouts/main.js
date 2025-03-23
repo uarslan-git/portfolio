@@ -10,7 +10,7 @@ const Layout = ({router, children}) => {
         <meta name="viewport" content="width=device-width, intial-scale=1"/>
         <title>Umut Arslan - Website</title>
       </Head>
-      <Navbar/>
+      <Navbar path={router.asPath}/>
     <Container maxW="container.md" pt={14}>
       {children}
     </Container>
