@@ -1,35 +1,4 @@
-<<<<<<< HEAD
-import { HamburgerIcon } from "@chakra-ui/icons"
-import {
-  Box,
-  Container,
-  Flex,
-  Heading,
-  IconButton,
-  Link,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuList,
-  Stack,
-  useColorModeValue,
-} from "@chakra-ui/react"
-import React from "react"
-import Logo from "./logo"
-
-const LinkItem = ({ href, path, children }) => {
-  const active = path === href
-  const inactiveColor = useColorModeValue("gray.200", "whiteAlpha.900")
-  return (
-    <Link
-      p={1}
-      bg={active ? "teal" : undefined}
-      color={active ? "#202023" : inactiveColor}
-    >
-      {children}
-    </Link>
-=======
-import { Box, Container, Flex, Heading, Link, useColorMode } from '@chakra-ui/react';
+import { Box, Container, Flex, Heading, Link, useColorMode, Stack, Menu, MenuButton, IconButton, HamburgerIcon, MenuList, MenuItem } from '@chakra-ui/react';
 import React from 'react';
 import Logo from './logo';
 
@@ -45,27 +14,6 @@ const LinkItem = ({href, path, children})=> {
     >
       {children}
     </Link>
-  )
-}
-
-const Navbar = (props) => {
-  const { path } = props;
-  return (
-    <Box
-    position={'fixed'}
-    as='nav'
-    w={'100%'}
-    {...props}
-    >
-      <Container>
-        <Flex bg={'red'}>
-          <Heading>
-          <Logo/>
-          </Heading>
-      </Flex>
-      </Container>
-    </Box>
->>>>>>> 9f0257498a3e3371f736ac3628d4315e4af5324a
   )
 }
 
