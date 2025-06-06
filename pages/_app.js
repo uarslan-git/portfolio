@@ -3,10 +3,10 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/react" // Use ChakraProv
 import theme from "../components/theme.js"
 import Head from "next/head"
 
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps, router}) {
     return (
         <ChakraProvider theme={theme}>
-            <Layout>
+            <Layout router={router}>
                 <Component {...pageProps} />
             </Layout>
         </ChakraProvider>
