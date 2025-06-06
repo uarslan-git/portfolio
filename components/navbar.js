@@ -1,9 +1,9 @@
 import { Box, Container, Flex, Heading, Link, Stack } from "@chakra-ui/layout"
 import { useColorModeValue } from "@chakra-ui/color-mode"
 import Logo from "./logo.js"
-import { Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/menu";
-import { IconButton } from "@chakra-ui/button";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/menu"
+import { IconButton } from "@chakra-ui/button"
+import { HamburgerIcon } from "@chakra-ui/icons"
 
 const LinkItem = ({ href, path, children }) => {
     const active = path === href
@@ -59,23 +59,19 @@ const Navbar = (props) => {
                         posts
                     </LinkItem>
                 </Stack>
-                <Box
-                    flex={1}
-                    align={"right"}
-                >
-                    <Box ml={2} display={{base: "inline-block", md: "none"}}>
+                <Box flex={1} align={"right"}>
+                    <Box ml={2} display={{ base: "inline-block", md: "none" }}>
                         <Menu>
                             <MenuButton
                                 as={IconButton}
-                                icon={<HamburgerIcon/>}
+                                icon={<HamburgerIcon />}
                                 variant={"outline"}
                                 aria-label="Options]"
-                            >
-                            </MenuButton>
+                            ></MenuButton>
                             <MenuList>
-                                    <Link href={"/works"} passHref>
-                                        <MenuItem as={Link}>Works</MenuItem>
-                                    </Link>
+                                <Link href={"/works"} passHref>
+                                    <MenuItem as={Link}>Works</MenuItem>
+                                </Link>
                             </MenuList>
                         </Menu>
                     </Box>
