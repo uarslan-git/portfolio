@@ -1,6 +1,9 @@
 import { Box, Container, Flex, Heading, Link, Stack } from "@chakra-ui/layout"
 import { useColorModeValue } from "@chakra-ui/color-mode"
 import Logo from "./logo.js"
+import { Menu, MenuButton } from "@chakra-ui/menu";
+import { IconButton } from "@chakra-ui/button";
+import { HamburgerIcon } from "@chakra-ui/icons";
 
 const LinkItem = ({ href, path, children }) => {
     const active = path === href
@@ -38,17 +41,16 @@ const Navbar = (props) => {
                 justifyContent={"space-between"}
             >
                 <Flex alignContent={"center"} mr={5}>
-                    <Heading as="h1" size="lg" letterSpacing={'tighter'}>
+                    <Heading as="h1" size="lg" letterSpacing={"tighter"}>
                         <Logo />
                     </Heading>
                 </Flex>
                 <Stack
-                    direction={{ base: "column", md: "row"}}
-                    display={{ base: 'none', md: 'flex'}}
-                    width={{ base: "full", md: 'auto'}}
+                    direction={{ base: "column", md: "row" }}
+                    display={{ base: "none", md: "flex" }}
+                    width={{ base: "full", md: "auto" }}
                     alighItems="center"
                     flexGrow={1}
-
                 >
                     <LinkItem href={"/works"} path={path}>
                         Works
@@ -57,6 +59,22 @@ const Navbar = (props) => {
                         posts
                     </LinkItem>
                 </Stack>
+                <Box
+                    flex={1}
+                    align={"right"}
+                >
+                    <Box ml={2} display={{base: "inline-block", md: "none"}}>
+                        <Menu>
+                            <MenuButton
+                                as={IconButton}
+                                icon={<HamburgerIcon/>}
+                                variant={"outline"}
+                                aria-label="Options]"
+                            >
+                            </MenuButton>
+                        </Menu>
+                    </Box>
+                </Box>
             </Container>
         </Box>
     )

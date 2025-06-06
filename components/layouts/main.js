@@ -5,7 +5,6 @@ import Navbar from "../navbar.js";
 import { useRouter } from "next/router.js";
 
 const Main = ({children, router}) => {
-    const {asPath} = useRouter
     return (
         <Box as="main" pb={8}>
             <Head>
@@ -13,7 +12,7 @@ const Main = ({children, router}) => {
                 <title>Umut Arslan - Home Page</title>
             </Head>
 
-            <Navbar path={asPath}/>
+            <Navbar path={router.asPath}/>
             
             <Container maxW="container.md" pt={14}>
                 {children}
