@@ -1,7 +1,7 @@
 import { Box, Container, Flex, Heading, Link, Stack } from "@chakra-ui/layout"
 import { useColorModeValue } from "@chakra-ui/color-mode"
 import Logo from "./logo.js"
-import { Menu, MenuButton } from "@chakra-ui/menu";
+import { Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/menu";
 import { IconButton } from "@chakra-ui/button";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
@@ -72,6 +72,11 @@ const Navbar = (props) => {
                                 aria-label="Options]"
                             >
                             </MenuButton>
+                            <MenuList>
+                                    <Link href={"/works"} passHref>
+                                        <MenuItem as={Link}>Works</MenuItem>
+                                    </Link>
+                            </MenuList>
                         </Menu>
                     </Box>
                 </Box>
