@@ -13,7 +13,7 @@ export function MenuList({ children }) {
         position: 'absolute',
         right: 0,
         minWidth: '200px',
-        backgroundColor: 'white',
+        backgroundColor: 'black',
         border: '1px solid #ccc',
         borderRadius: '4px',
         boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
