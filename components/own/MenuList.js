@@ -1,9 +1,8 @@
 import { useContext } from "react";
 import { MenuContext } from "./MenuContext.js";
-import React from "react";
 
 export function MenuList({ children }) {
-  const { isOpen, closeMenu } = useContext(MenuContext);
+  const { isOpen, closeMenu } = React.useContext(MenuContext);
   
   if (!isOpen) return null;
   
