@@ -70,7 +70,7 @@ const Navbar = (props) => {
                             ></MenuButton>
                             <MenuList>
                                 <Link href={"/works"} passHref>
-                                    <MenuItem as={Link}>Works</MenuItem>
+                                    <MenuItem>Works</MenuItem>
                                 </Link>
                             </MenuList>
                         </Menu>
