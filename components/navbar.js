@@ -4,6 +4,7 @@ import Logo from "./logo.js"
 import { Menu, MenuButton, MenuItem, MenuList } from "@chakra-ui/menu"
 import { IconButton } from "@chakra-ui/button"
 import { HamburgerIcon } from "@chakra-ui/icons"
+import ThemeButtonToggle from "./theme-button-toggle.js";
 
 const LinkItem = ({ href, path, children }) => {
     const active = path === href
@@ -60,6 +61,7 @@ const Navbar = (props) => {
                     </LinkItem>
                 </Stack>
                 <Box flex={1} align={"right"}>
+                    <ThemeButtonToggle/>
                     <Box ml={2} display={{ base: "inline-block", md: "none" }}>
                         <Menu>
                             <MenuButton
@@ -69,8 +71,18 @@ const Navbar = (props) => {
                                 aria-label="Options]"
                             ></MenuButton>
                             <MenuList>
-                                <Link href={"/works"} passHref>
-                                    <MenuItem>Works</MenuItem>
+                                <Link href={"/about"} passHref>
+                                    <MenuItem>About</MenuItem>
+                                </Link>
+                            </MenuList>
+                            <MenuList>
+                                <Link href={"/work"} passHref>
+                                    <MenuItem>Work</MenuItem>
+                                </Link>
+                            </MenuList>
+                            <MenuList>
+                                <Link href={"about"} passHref>
+                                    <MenuItem>About</MenuItem>
                                 </Link>
                             </MenuList>
                         </Menu>
