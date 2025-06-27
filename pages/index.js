@@ -32,7 +32,7 @@ const Page = () => {
                         position="relative"
                     >
                         <Image
-                            src="/picture.jpg"
+                            src="picture.jpg"
                             alt="Profile picture"
                             objectFit="cover"
                             width="100%"
